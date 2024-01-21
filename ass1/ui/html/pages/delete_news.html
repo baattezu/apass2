@@ -1,0 +1,15 @@
+{{template "base" .}}
+{{define "title"}}Delete News{{end}}
+{{define "content"}}
+<div class="container-fluid" style="padding: 0% 20% 0% 20%;">
+    <h1> Delete news </h1>
+    <form action="/foradmins/deletenews" method="post">
+        <div class="mb-3">
+            <label for="deleteTitle" class="form-label">Title</label>
+            <input type="text" class="form-control" id="deleteTitle" name="deleteTitle">
+        </div>
+        <button type="submit" class="btn btn-primary">Delete</button>
+    </form>
+</div>
+
+{{end}}

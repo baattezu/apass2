@@ -1,0 +1,31 @@
+{{template "base" .}}
+{{define "title"}}For Staff{{end}}
+{{define "content"}}
+<div class="row">
+
+    <div class="col-md-8">
+        {{range .NewsList}}
+        <div class="card mb-3" style="color: blue">
+            <img src="{{.ImageURL}}" class="card-img-top" alt="News Image">
+            <div class="card-body">
+                <h5 class="card-title">{{.Title}}</h5>
+                <p class="card-text">{{.Content}}</p>
+            </div>
+        </div>
+        {{end}}
+    </div>
+
+    <!-- Sidebar -->
+    <div class="col-md-4">
+        <h2>Popular Topics</h2>
+        <ul class="list-group">
+            <li class="list-group-item">Technology</li>
+            <li class="list-group-item">Science</li>
+            <li class="list-group-item">Entertainment</li>
+            <li class="list-group-item">Sports</li>
+        </ul>
+    </div>
+</div>
+<h2>Latest Snippets</h2>
+<p>There's nothing to see here yet!</p>
+{{end}}

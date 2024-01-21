@@ -1,0 +1,14 @@
+{{define "news_section"}}
+<div class="col-md-8">
+    <h2>{{.SectionTitle}}</h2>
+    {{range .NewsList}}
+    <div class="card mb-3">
+        <img src="{{.ImageURL}}" class="card-img-top" alt="News Image">
+        <div class="card-body">
+            <h5 class="card-title">{{.Tag}}</h5>
+            <p class="card-text">{{.Content}}</p>
+        </div>
+    </div>
+    {{end}}
+</div>
+{{end}}

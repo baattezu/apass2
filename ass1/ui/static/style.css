@@ -1,0 +1,13 @@
+#create-delete{
+    padding: 10% 30% 10% 30%;
+}
+.button-create{
+    margin: 10%;
+    background-color: gold;
+    color: black;
+}
+.button-delete{
+    margin: 10%;
+    background-color: red;
+    color: white;
+}

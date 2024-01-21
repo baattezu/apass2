@@ -1,0 +1,29 @@
+{{template "base" .}}
+{{define "title"}}Update News{{end}}
+{{define "content"}}
+<div class="container-fluid" style="padding: 0% 20% 0% 20%;">
+    <h1> Create news </h1>
+    <form action="/foradmins/updatenews" method="post">
+        <div class="mb-3">
+            <label for="inputTitle" class="form-label">Old Title</label>
+            <input type="text" class="form-control" id="inputTitle" name="inputTitle">
+        </div>
+        <div class="mb-3">
+            <label for="inputTitle" class="form-label">New Title</label>
+            <input type="text" class="form-control" id="inputNewTitle" name="inputNextTitle">
+        </div>
+        <div class="mb-3">
+            <label for="inputText" class="form-label">New Text</label>
+            <input type="text" class="form-control" id="inputText"  name="inputText">
+        </div>
+        <select class="form-select" aria-label="Tag" name="tag">
+            <option selected>Open this select menu</option>
+            <option value="For Students">For Students</option>
+            <option value="For Staff">For Staff</option>
+            <option value="For Applicants">For Applicants</option>
+        </select>
+        <button type="submit" class="btn btn-primary">Update</button>
+    </form>
+</div>
+
+{{end}}

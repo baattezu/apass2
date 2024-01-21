@@ -1,0 +1,9 @@
+{{template "base" .}}
+{{define "title"}}For Admins{{end}}
+{{define "content"}}
+<div class="container-fluid" id="create-delete">
+    <a class="button-create"  href="/foradmins/createnews">Create News</a>
+    <a class="button-delete" href="/foradmins/deletenews">Delete News</a>
+    <a class="button-delete" href="/foradmins/updatenews">Update News</a>
+</div>
+{{end}}

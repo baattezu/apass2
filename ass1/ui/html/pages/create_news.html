@@ -1,0 +1,24 @@
+{{template "base" .}}
+{{define "title"}}Create News{{end}}
+{{define "content"}}
+<div class="container-fluid" style="padding: 0% 20% 0% 20%;">
+    <h1> Create news </h1>
+    <form action="/foradmins/createnews" method="post">
+        <div class="mb-3">
+            <label for="inputTitle" class="form-label">Title</label>
+            <input type="text" class="form-control" id="inputTitle" name="inputTitle" >
+        </div>
+        <div class="mb-3">
+            <label for="inputText" class="form-label">Text</label>
+            <input type="text" class="form-control" id="inputText"  name="inputText" >
+        </div>
+        <select class="form-select" aria-label="Tag" name="tag" oninput="removeGlow('tag')">>
+            <option selected>Open this select menu</option>
+            <option value="For Students">For Students</option>
+            <option value="For Staff">For Staff</option>
+            <option value="For Applicants">For Applicants</option>
+        </select>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
+{{end}}
